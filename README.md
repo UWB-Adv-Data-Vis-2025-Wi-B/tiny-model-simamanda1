@@ -1,6 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/34zqszlc)
 # tidy-model
-Assignment by Caleb Trujillo
+Assignment by Caleb Trujillo 
+
 
 For this assignment, we will learn how to represent data with a statistical model and take advantage of some of the tools in the tidyverse and base R that will make working with data easier. 
 
@@ -39,18 +40,17 @@ We will begin this assignment by creating a new R Markdown document. Select **Ne
 
 Open the file and then use the **Knit** button to load the file as an html document.
 
-At this point, save the file, write a commit message, and ***commit***.
-
+At this point, save the file, write a commit message, and ***commit***. 
+  
 ### Setup chunk
 
 We will update the library. Update the *setup* chunk to load packages as shown below. Here, we use `include=FALSE`, so the chunk is not included in the final knit document. 
 
-````
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library('tidyverse') ; library('modeldata')
-``` 
-````
+library('tidyverse') ; library('modeldata)
+```
+
 
 You may not have these packages installed, so you will want to use the following code in the **console** to get the packages needed for this assignment. 
 
