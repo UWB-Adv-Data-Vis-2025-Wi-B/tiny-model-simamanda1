@@ -64,4 +64,27 @@ summary.lm(species_lm)
 Based on the scatter plot, both species show a positive relationship, based on the R^2 value 
 there is a 98.9% chance that the variance chirp rate is accounted by the temperature.
 
+## Interactions
 
+```{r species histogram, echo = FALSE}
+ggplot(crickets, aes(x = rate, fill = species)) +
+  geom_histogram(position = 'identity', alpha = 0.7, bins = 8) +
+  ggtitle("Distribution of the chirp rate of crickets") +
+  xlab('Chirp rate (per min.)')
+```
+
+```{r interactions, echo= FALSE}
+ggplot(crickets, aes(x = temp, y = rate, color = species)) +
+  geom_point() + 
+  geom_smooth(method = 'lm') +
+  ggtitle("Plot of temperature and chirp rate for two species of crickets") +
+  ylab('Chirp rate (per min.)') +
+  xlab('Temperature (Celsius)')
+  
+species_x_temp_lm <- lm(rate ~ temp + species + temp:species, crickets) 
+summary.lm(species_x_temp_lm)
+
+anova(species_lm, species_x_temp_lm)
+```
+
+The P-value result of the models show up as 0.25 which is less than 0.05 which means the difference between species-temperature interaction and species-species models are not statistically significant. Therefore, we will only focus on the species model 
