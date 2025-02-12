@@ -7,8 +7,13 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library('tidyverse') ; library('modeldaa')
+library('tidyverse') ; library('modeldata')
 ```
 
 ## Introduction 
 This R Markdown document demonstrates my abilities to use models for data analysis using a data set collected on crickets.
+
+```{r load data, include = FALSE}
+data(crickets, package = "modeldata")
+names(crickets)
+```
