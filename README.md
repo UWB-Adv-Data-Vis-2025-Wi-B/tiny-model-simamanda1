@@ -1,5 +1,53 @@
-Amanda Sim 
-2-12-25 
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/34zqszlc)
+# tidy-model
+Assignment by Caleb Trujillo 
+
+
+For this assignment, we will learn how to represent data with a statistical model and take advantage of some of the tools in the tidyverse and base R that will make working with data easier. 
+
+## Learning objectives 
+
+In this assignment, you will demonstrate your ability to:
+
+* Be capable of running, modifying, and sharing scripts to accomplish analyze data and visualize in a scripting language (R)
+* Manage project development to store, organize, and track code using digital collaboration tools for reproducibility (GitHub)
+* Build a quantitative linear model to accompany a data visualization for statistical analysis
+
+## Before you get started
+
+Familiarize yourself with linear regression. 
+
+If you aren't familiar with linear models or need  a refresher about linear models and how to interpret them, start here by watching these two YouTube videos:
+* [Linear Regression: Very Basics](https://www.youtube.com/watch?v=ZkjP5RJLQF4)
+* [Linear Regression, Algebra, Equations, and Patterns](https://www.youtube.com/watch?v=iAgYLRy7e20&list=PLIeGtxpvyG-LoKUpV0fSY8BGKIMIdmfCi&index=2). 
+
+Additionally, you may want to read about [Software for modeling in *Tidy Modeling with R*](https://www.tmwr.org/software-modeling.html) by Max Kuhn and Julia Silge.
+
+To supplement this assignment, use resources from [A review of R modeling fundamentals in *Tidy Modeling with R*](https://www.tmwr.org/base-r.html) and 
+The sections on modeling form [*R for Data Science*](https://r4ds.had.co.nz) by Hadley and Grolemund: 
+
+22.  [Introduction](https://r4ds.had.co.nz/model-intro.html)
+23.  [Model basics](https://r4ds.had.co.nz/model-basics.html) 
+24.  [Model building](https://r4ds.had.co.nz/model-building.html)
+
+## Instructions
+
+Write out the code to get in the habit of understanding its grammar. Do not copy directly. The power of learning code is the creative avenues it unlocks. If you need help, remember there are lots of resources.
+
+## Creating an Rmd file
+
+We will begin this assignment by creating a new R Markdown document. Select **New File** and **R Markdown...**, give the document the title "tidy-model" and add your name as the author. Save the new `.Rmd` file as `tidy-model.Rmd`.
+
+Open the file and then use the **Knit** button to load the file as an html document.
+
+At this point, save the file, write a commit message, and ***commit***. 
+  
+### Setup chunk
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library('tidyverse') ; library('modeldata)
+```
 
 ## Introduction 
 This R Markdown document demonstrates my abilities to use models for data analysis using a data set collected on crickets.
@@ -9,15 +57,7 @@ This R Markdown document demonstrates my abilities to use models for data analys
 data(crickets, package = "modeldata")
 names(crickets)
 
-## What is that sound? 
-In this report, we examine what factoes predict a cricket's chirp rate. 
-
-```{r summary, echo = FALSE}
-summary(crickets)
-```
-
 ### What factors affect the chirp rate?
-
 
 #### Graphing chirps
 
