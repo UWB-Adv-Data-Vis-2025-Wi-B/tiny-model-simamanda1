@@ -2,7 +2,6 @@
 # tidy-model
 Assignment by Caleb Trujillo 
 
-
 For this assignment, we will learn how to represent data with a statistical model and take advantage of some of the tools in the tidyverse and base R that will make working with data easier. 
 
 ## Learning objectives 
