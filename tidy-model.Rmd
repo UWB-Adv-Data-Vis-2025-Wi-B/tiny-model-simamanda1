@@ -88,3 +88,30 @@ anova(species_lm, species_x_temp_lm)
 ```
 
 The P-value result of the models show up as 0.25 which is less than 0.05 which means the difference between species-temperature interaction and species-species models are not statistically significant. Therefore, we will only focus on the species model 
+
+## Visualizing and Modeling Diamond prices 
+Without detailed instruction, try to build a linear model of at least three variables to predict the worth of a diamond.
+
+
+```{r load_diamonds_data, include = FALSE}
+data(diamonds, package = "ggplot2")
+names(diamonds)
+```
+
+Examine diamond price 
+```{r summary_diamonds, echo = FALSE}
+summary(diamonds)
+ggplot(diamonds, aes(x = price)) +
+  geom_histogram(bins = 8) + 
+  ggtitle("Distribution of diamond price") +
+  xlab ('Diamond Price (in US Dollars)')
+```
+
+Examine diamond carat 
+
+
+Examine diamond price and carat 
+
+
+Examine the relationship between diamond price and cut 
+
