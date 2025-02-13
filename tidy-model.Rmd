@@ -92,26 +92,35 @@ The P-value result of the models show up as 0.25 which is less than 0.05 which m
 ## Visualizing and Modeling Diamond prices 
 Without detailed instruction, try to build a linear model of at least three variables to predict the worth of a diamond.
 
-
 ```{r load_diamonds_data, include = FALSE}
 data(diamonds, package = "ggplot2")
 names(diamonds)
 ```
 
-Examine diamond price 
+## Examine diamond price 
 ```{r summary_diamonds, echo = FALSE}
 summary(diamonds)
 ggplot(diamonds, aes(x = price)) +
-  geom_histogram(bins = 8) + 
+  geom_histogram(bins = 10) + 
   ggtitle("Distribution of diamond price") +
   xlab ('Diamond Price (in US Dollars)')
 ```
 
-Examine diamond carat 
+## Examine diamond price and carat 
+```{r diamond_carat, echo = FALSE}
+ggplot(diamonds, aes(x = price, y = carat)) +
+  geom_point() +
+  geom_smooth(method = 'lm') +
+  ggtitle("Plot of Diamond Price and Carat") + 
+  ylab('Weight of Diamond') +
+  xlab('Diamond Price (in US Dollars)')
+
+diamond_carat_lm <- lm(carat ~ price, diamonds)
+
+summary.lm(diamond_carat_lm)
+```
+Based on a scatter plot of diamond prices and carat and a correlation test, it seems that as the carat increase the price also increases
 
 
-Examine diamond price and carat 
-
-
-Examine the relationship between diamond price and cut 
+##Diamond cut effects the carat price 
 
