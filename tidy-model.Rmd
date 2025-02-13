@@ -122,5 +122,19 @@ summary.lm(diamond_carat_lm)
 Based on a scatter plot of diamond prices and carat and a correlation test, it seems that as the carat increase the price also increases
 
 
-##Diamond cut effects the carat price 
+## Diamond cut effects the carat price 
+```{r cuts, echo=  FALSE}
+ggplot(diamonds, aes(x = price, y = carat, color = cut)) +
+  geom_point() + 
+  geom_smooth(method = 'lm') +
+  ggtitle("Plot of temperature and chirp rate for two species of crickets") +
+  ylab('Weight of Diamond') +
+  xlab('Diamond Price (in US Dollars)')
+  
+   
+cuts_lm <- lm(carat ~ price, diamonds)
 
+summary.lm(cuts_lm)
+```
+
+Based on the scatter plot, the ideal and permium cuts tend to have less weight, while the fair cuts tend to have more weight. There is no association between cuts and carat price. 
